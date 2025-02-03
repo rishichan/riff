@@ -43,6 +43,8 @@ gem "grape"
 gem "grape-entity"
 gem "bcrypt", "~> 3.1.7"
 gem "jwt"
+gem "sidekiq"
+gem "redis"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -53,6 +55,8 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+  gem "byebug"
+  gem "dotenv-rails"
 end
 
 group :development do
