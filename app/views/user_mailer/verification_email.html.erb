@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+     <div style="font-family: Arial, sans-serif;">
+        <p>Hello <%= @user.username%></p>
+        <p>Welcome to <b>Riff</b></p>
+        <p>To verify your email, please click the link below:</p>
+        <p>
+          <a href=<%= @verification_link%> target="_blank" 
+             style="display: inline-block; background-color: #007bff; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px;">
+            Verify Email Address
+          </a>
+        </p>
+        <p>If you didn’t sign up, please ignore this email.</p>
+        <p>Thank you</p>
+      </div>
+</html>

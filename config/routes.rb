@@ -1,4 +1,4 @@
-# require "sidekiq/web"
+require "sidekiq/web"
 
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -15,10 +15,9 @@ Rails.application.routes.draw do
   # root "posts#index"
 
 
-  # authenticate :user, lambda { |u| u.admin? } do
-  #   mount Sidekiq::Web => "/sidekiq"
-  # end
-  # mount Sidekiq::Web => "/sidekiq"
+  if Rails.env.development?
+    mount Sidekiq::Web => "/sidekiq"
+  end
 
   mount Base => "/"
 end

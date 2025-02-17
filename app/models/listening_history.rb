@@ -1,0 +1,2 @@
+class ListeningHistory < ApplicationRecord
+end
